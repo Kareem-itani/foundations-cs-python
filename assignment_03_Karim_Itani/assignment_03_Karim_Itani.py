@@ -59,7 +59,7 @@ def menu():
         
         print("1. Count Digits")
         print("2. Find Max")
-        print("3. Find Tags")
+        print("3. Count Tags")
         print("4. Exit")
 
         for i in range(15):
