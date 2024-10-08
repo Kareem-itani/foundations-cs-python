@@ -33,6 +33,11 @@ def countHtmlTags(html_code, html_tag_wanted):
     
     starting_tag = "<" + html_tag_wanted
     closing_tag = "</" + html_tag_wanted + ">"
+    self_closing_tag = "<" + html_tag_wanted
+
+    self_closing_position = html_code.find(self_closing_tag)
+    if self_closing_position != -1:
+        return 1 + countHtmlTags(html_code[self_closing_position + len(self_closing_tag):], html_tag_wanted)
 
     starting_tag_position = html_code.find(starting_tag)
     if starting_tag_position == -1:
