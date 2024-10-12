@@ -3,8 +3,8 @@
 # This program recursively counts the number of digits of an integer
 
 def countDigits(integer_exercise_one):
-    if integer_exercise_one == 0:
-        return 0
+    if (integer_exercise_one // 10) == 0:
+        return 1
     return 1 + countDigits(integer_exercise_one // 10)
 
 # Choice 2
