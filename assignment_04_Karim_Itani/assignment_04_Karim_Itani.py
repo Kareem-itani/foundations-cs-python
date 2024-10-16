@@ -93,8 +93,8 @@ def menu():
         choice = int(input("Enter a choice: "))
 
         if(choice == 1): #Sum Tuples
-            tuple_one = {int(num) for num in input("For tuple 1 enter numbers seperated by space: ").split()}
-            tuple_two = {int(num) for num in input("For tuple 2 enter numbers seperated by space: ").split()}
+            tuple_one = (int(num) for num in input("For tuple 1 enter numbers seperated by space: ").split())
+            tuple_two = (int(num) for num in input("For tuple 2 enter numbers seperated by space: ").split())
             tuple_sum = getSumTuples(tuple_one,tuple_two)
             print(tuple_sum)
         
